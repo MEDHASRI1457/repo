@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #020617;
+        color: #e2e8f0;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(15, 23, 42, 0.94);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+        backdrop-filter: blur(16px);
+      }
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .logo {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #f8fafc;
+      }
+      .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1.5rem;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #cbd5e1;
+        font-weight: 600;
+      }
+      .nav-links a:hover {
+        color: #7dd3fc;
+      }
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr minmax(220px, 280px);
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 0;
+      }
+      .hero-text {
+        text-align: center;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        line-height: 1.02;
+      }
+      .typing {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 0.14em solid #7dd3fc;
+        animation: typing 3.5s steps(22, end) forwards, blink-caret 0.8s step-end infinite;
+      }
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 18ch; }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: #2563eb; }
+      }
+      .hero p {
+        margin: 1.5rem 0 0;
+        max-width: 40rem;
+        line-height: 1.8;
+        color: #475569;
+      }
+      .button-primary {
+        display: inline-block;
+        margin-top: 1.75rem;
+        padding: 0.95rem 1.75rem;
+        background: #2563eb;
+        color: #ffffff;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .hero-image {
+        display: flex;
+        justify-content: center;
+      }
+      .hero-image img {
+        width: 280px;
+        height: 280px;
+        border-radius: 1.25rem;
+        box-shadow: 0 25px 60px rgba(255, 255, 255, 0.08);
+        object-fit: cover;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+      section {
+        padding: 3rem 0;
+      }
+      section h2 {
+        margin: 0 0 1rem;
+        font-size: 2rem;
+        color: #ffffff;
+        text-align: center;
+      }
+      .section-content {
+        display: grid;
+        gap: 1rem;
+        text-align: center;
+        justify-items: center;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        justify-items: center;
+      }
+      .card {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background: rgba(15, 23, 42, 0.95);
+        border: 1px solid rgba(71, 85, 105, 0.18);
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.32);
+      }
+      footer {
+        text-align: center;
+        color: #94a3b8;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(148, 163, 184, 0.16);
+      }
+      @media (max-width: 880px) {
+        .hero {
+          text-align: left;
+        }
+        .hero p {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .hero-image {
+          margin-top: 0;
+        }
+        .hero-image img {
+          width: 240px;
+          height: 240px;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <p style="margin-bottom: .75rem; color: #1d4ed8; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;">Hello, I am</p>
+          <h1>Medha Sri — <span class="typing">Creative Developer</span></h1>
+          <p>
+            I build clean, responsive websites and user experiences. Explore my about section, skills, projects, and contact details to learn more.
+          </p>
+          <a class="button-primary" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-image">
+          <img src="assets/image.jpg.jpeg" alt="Portfolio hero image" />
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <div class="section-content">
+          <p>
+            I'm Medha Sri, a beginner web developer learning HTML, CSS, and JavaScript. I enjoy making simple websites, practicing layouts, and improving step by step.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="cards">
+          <div class="card"><strong>HTML</strong><p>Structure content on the web and build pages.</p></div>
+          <div class="card"><strong>C</strong><p>Basic programming concepts and procedural coding.</p></div>
+          <div class="card"><strong>Python</strong><p>Beginner-friendly scripting, data handling, and automation.</p></div>
+          <div class="card"><strong>Java</strong><p>Object-oriented programming and application development basics.</p></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Project</h2>
+        <div class="cards">
+          <div class="card"><strong>Portfolio Page</strong><p>A sleek landing page with a side image and clear section navigation.</p></div>
+          <div class="card"><strong>Responsive Layout</strong><p>Mobile-friendly design that works from small screens to desktop.</p></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="section-content">
+          <p>If you'd like to work together, send a message and let's create something great.</p>
+          <p>Email: <a href="mailto:medhasrisangepu995@gmail.com">medhasrisangepu995@gmail.com</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 My Portfolio. Crafted with HTML and CSS.</p>
+    </footer>
+  </body>
+</html>
